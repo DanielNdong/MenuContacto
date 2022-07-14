@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario_Contacto</title>
+    <link rel="stylesheet" href="/css/styles-contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <section>
+            <div>
+                <h2>Formulario de contacto</h2>
+                <p>Escribenos y en breve nos pondremos en contacto contigo</p>
+            </div>
+            
+            <form>
+                    <section class="strip">
+                        <!--   <div>
+                        <h2>Hola! soy Dani y tu?</h2>
+                    </div> -->
+
+                    <!-- Seccion de Registro 1 -->
+                    <div class="input_name_container">
+                        <label for="nombre" class="asterisk">
+                            <div>Nombre</div>
+                            <div>*</div>
+                        </label>
+                        
+                        <div class="ts">
+                            <input autocomplete="off" type="text" name="nombre" id="nombre" placeholder="Cómo te llamas..." required>
+                            <a href="#face2">
+                                <div class="button-container">
+                                    Dále!
+                                    <div class="arrow1" >
+                                        <img src="./assets/icons/arrow-right-svgrepo-com.svg" alt="arrow-right-icon">
+                                    </div>
+                                </div>    
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Seccion de Registro 2 -->
+                    <div class="input__contacts__container" id="face2">
+                        
+                        <section>
+                            <div class="input_email">
+                                <label for="email" class="asterisk2">
+                                    <div>Email</div>
+                                    <div>*</div>
+                                </label>
+                                <input autocomplete="off" type="email" name="email" placeholder="example@mydomain.com" required>
+                            </div>
+                            <div  class="input-telefono" >
+                                <label for="telefono" class="asterisk2">
+                                Tel&eacute;fono
+                                </label>
+                                <input autocomplete="off" type="number" name="telefono" placeholder="222-111-222-333" required>
+                            </div>
+                            <div  class="input-web">
+                                <label for="sitioweb" class="asterisk2">
+                                    Sitio web
+                                </label>
+                                <input autocomplete="off" type="url" name="sitioweb" placeholder="www.siteweb.com" required>
+                            </div>
+                            <a href="#face3">
+                                <div class="button-container-two">
+                                    Dale!
+                                    <div class=" arrow-2" >
+                                        <img src="./assets/icons/arrow-right-svgrepo-com.svg" alt="arrow-right-icon">
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                    </div>
+
+                    <!-- Seccion Resgistro 3 -->
+
+                    <div class="input__subject__container"  id="face3">
+                        <div class="input__asunto">
+                            <label for="asunto" class="asterisk">
+                                <div>Asunto</div>
+                                <div>*</div>
+                            </label>
+                            <input autocomplete="off" type="text" name="asunto" placeholder="Escribe tu Asunto" required>
+                        </div>
+                        <div class="input__message">
+                            <label for="mensaje" class="asterisk">
+                                <div>Mensaje</div>
+                                <div>*</div>
+                            </label>
+                            <textarea name="mensaje" required>
+                            </textarea>
+                        </div>
+                        <div>
+                            <input  type="submit" value="ENVIAR" >
+                        </div>
+                    </div>
+                </section>
+            </form>
+            <div class="warn">
+                Los campos con <span style="font-size: 1.1rem;">(*)</span> son obligatorios.
+            </div>
+        </section>
+    </label>
+
+        
+    </main>
+</body>
+</html>

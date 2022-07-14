@@ -1,0 +1,340 @@
+:root {
+    --lila: #A005F6;
+    --texto: #EEE7F4;
+    --lilaFuerte: #401e6f;
+    --focused: #8e6fb8f;
+    --valid: #3cd33c;
+    --placeholder: #ebe3e9;
+    --invalid: rgb(169, 33, 33);
+    --submit-hover: #7e13b8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: 'Raleway', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--lilaFuerte);
+}
+
+main{
+    width: 100%;
+    min-width: 10rem;
+    height: 100%;
+    position: relative;
+    background-color: var(--lila);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > section{
+    width: 50rem;
+    min-width: 20rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* El height de los contenedor del h1 y p */
+main > section > div:nth-child(1){
+    width: 50rem;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main > section div:nth-child(1) h2{
+    color: var(--texto);
+    font-size: 2.83em;
+    letter-spacing: 3;
+    font-weight: 400;
+}
+main > section div:nth-child(1) p{
+    color: var(--placeholder);
+    line-height: 2;
+/*     font-family: 'Roboto', sans-serif;
+ */    letter-spacing: 1;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+main > section form{
+    position: relative;
+    margin-top: 2rem;
+    left: -.5rem;
+    width: 33rem;
+    height: 23rem;
+    overflow: hidden;
+}
+
+.strip{
+    position: absolute;
+    left: -3rem;
+    width: 800rem;
+    height: 20rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.strip > div{
+    width: 35rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Colocamos el asterisco(*) 'en línea' */
+.asterisk{
+    display: flex;
+    align-items: flex-start;
+    color: var(--texto);
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    width: 14rem;
+    padding-left: -8.7rem;
+}
+
+.asterisk div:nth-child(1){
+    align-self: center;
+}
+
+.asterisk div:nth-child(2){
+    color: rgb(171, 45, 45);
+    font-size: 2rem;
+    margin-left: .4rem;
+}
+
+/* Establecemos propiedades genericas a todos los input */
+
+form 
+[type=text],
+[type=number],
+[type=email],
+[type=url]{
+    width: 18rem;
+    height: 2.5rem;
+    padding: .8rem;
+    background-color: var(--lilaFuerte);
+    border: solid .13rem var(--texto);
+    border-radius: .5rem;
+    color: var(--texto);
+    font-size: 1.2rem;
+    letter-spacing: 2;
+    outline: none;
+    transition: all .3s ease-in;
+}
+
+.input_name_container{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-top: 3rem;
+    justify-self: center;
+    color: var(--texto);
+}
+
+
+input:focus{
+    background-color: var(--focused);
+}
+
+input::placeholder{
+    font-size: 1rem;
+    color: var(--placeholder);
+}
+
+[type=text]:valid,
+[type=number]:valid,
+[type=email]:valid,
+[type=url]:valid{
+    border: solid .16rem var(--valid);
+    box-shadow: 0px 10px 10px var(--lilaFuerte);
+}
+input:invalid{
+    border: solid 1.4px var(--invalid);
+}
+input:valid .asterisk div:nth-child(2){
+    color: var(--valid);
+}
+
+
+.input_name_container .ts{
+    display: flex;
+    align-items: center;
+    padding-left: 8.7rem;
+}
+
+.button-container{
+    position: relative;
+    top: 0;
+    right: -1rem;
+    height: 1.7rem;
+    width: 5.8rem;
+    padding-left: 1rem;
+    font-weight: 400;
+    background-color: var(--lilaFuerte);
+    border-radius: 30rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--texto);
+}
+
+.button-container div:nth-child(1){
+    position: absolute;
+    /* top: -.2rem;
+    left: 0; */
+    background-color: var(--lila);
+    border-radius: 30rem;
+    width: 6rem;
+    font-size: 2.5rem;
+    transition: all .5s ease-in;
+}
+
+.arrow1{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    background-color: var(--lila);
+    width: 2rem;
+    height: 1.7rem;
+    margin-left: 0rem;
+}
+
+.button-container:hover .arrow1{
+    margin-left: 3.4rem;
+} 
+
+.arrow1 img{
+    height: 100%;
+    color: var(--texto);
+}
+
+.input__contacts__container > section{
+    position: relative;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--placeholder);
+}
+
+
+.button-container-two{
+    position: relative;
+    top: -9.1rem;
+    right: -13rem;
+    height: 1.7rem;
+    width: 5.8rem;
+    padding-left: 1rem;
+    font-weight: 400;
+    background-color: var(--lilaFuerte);
+    border-radius: 30rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--texto);
+}
+
+.arrow-2{
+    position: absolute; 
+    background-color: var(--lila);
+    border-radius: 30rem;
+    width: 6rem;
+    font-size: 2.5rem;
+    height: 2rem;
+    top: 0;
+    left: 0rem;
+    margin-left: 0rem;
+    transition: all .5s ease-in;
+    margin-left: 0;
+}
+
+.button-container-two:hover .arrow-2{
+    margin-left: 3.4rem;
+} 
+
+.arrow-2 img{
+    height: 100%;
+}
+
+.asterisk2{
+    margin: 0;
+    display: flex;
+}
+/* 
+.input__contacts__container > aside{
+    position: absolute;
+    top: 2rem;
+    left: 1.2rem;
+}
+ */
+
+.input__contacts__container  div > label{
+    padding-bottom: .3rem;
+}
+
+.input__message{
+    height: 40rem;
+}
+
+textarea{
+    width: 18rem;
+    min-width: 18rem;
+    max-width: 30rem;
+    height: 10rem;
+    max-height: 10rem;
+    min-height: 5rem;
+    padding: .8rem;
+    background-color: var(--lilaFuerte);
+    border: solid .13rem var(--texto);
+    border-radius: .5rem;
+    font-size: 1rem;
+    letter-spacing: 2;
+    outline: none;
+    color: var(--texto);
+}
+
+
+[type=submit]{
+    border: solid 0.13rem var(--texto);
+    padding: 0.6rem 2.9rem;
+    background-color: var(--lila);
+    color: var(--texto);
+    border-radius: 0;
+    transition: all .3s ease-in-out;
+}
+
+
+[type=submit]:hover{
+    padding: 0.6rem 1.9rem;
+    background-color: var(--submit-hover);
+    border-radius: 1rem;
+}
+
+.warn{
+    font-size: .9rem;
+    color: var(--placeholder);
+}
+
